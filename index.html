@@ -1,0 +1,479 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EngPaul Educare KE</title>
+
+<style>
+* {
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body {
+  font-family:Arial,sans-serif;
+  background:#05051d;
+  color:white;
+}
+
+header {
+  background:#090a32;
+  padding:22px 12px;
+  text-align:center;
+  border-bottom:2px solid #813cff;
+}
+
+header h1 span {color:#ffcc00}
+header p {color:#b9c4ff;margin-top:8px}
+
+nav {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:15px;
+  padding:15px 8px;
+  background:#11113e;
+}
+
+nav a {
+  color:white;
+  text-decoration:none;
+  font-size:13px;
+}
+
+.hero {
+  text-align:center;
+  padding:45px 18px;
+  background:linear-gradient(130deg,#09092c,#29105c);
+}
+
+.hero h2 {font-size:28px;margin-bottom:15px}
+.hero span {color:#00eaff}
+.hero p {line-height:1.7;color:#d5d8ff}
+
+.btn {
+  padding:12px 20px;
+  background:#ffca05;
+  color:#08082b;
+  border:0;
+  border-radius:25px;
+  font-weight:bold;
+  margin-top:18px;
+  cursor:pointer;
+}
+
+.heading {
+  text-align:center;
+  color:#00eaff;
+  margin:32px 10px 20px;
+}
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:13px;
+  padding:15px;
+}
+
+.card {
+  background:#11113d;
+  border:1px solid #6633ff;
+  padding:19px 12px;
+  border-radius:13px;
+  text-align:center;
+}
+
+.card h3 {color:#00eaff;margin-bottom:12px}
+.card p {font-size:13px;line-height:1.6;color:#ddd}
+
+.card button {
+  background:#5930dc;
+  color:white;
+  border:0;
+  padding:10px 14px;
+  border-radius:18px;
+  margin-top:13px;
+  cursor:pointer;
+}
+
+.free {border-color:#00c99a}
+.free h3 {color:#00e8b0}
+.ai {border-color:#b34cff}
+.ai h3 {color:#d18aff}
+
+.panel {
+  margin:15px;
+  padding:20px;
+  background:#11113d;
+  border-radius:14px;
+  border:1px solid #00dfff;
+}
+
+.panel h3 {color:#00eaff;margin-bottom:12px}
+.panel p {line-height:1.6;color:#ddd}
+
+input,select,textarea {
+  width:100%;
+  padding:13px;
+  margin-top:12px;
+  background:#08082b;
+  color:white;
+  border:1px solid #00dfff;
+  border-radius:8px;
+}
+
+.resource {
+  margin-top:15px;
+}
+
+.resource a {
+  display:inline-block;
+  margin-top:12px;
+  padding:10px 16px;
+  background:#1265e9;
+  color:white;
+  text-decoration:none;
+  border-radius:20px;
+  font-size:13px;
+}
+
+#answer {
+  color:#ffda55;
+  margin-top:15px;
+  white-space:pre-wrap;
+}
+
+footer {
+  background:#090a32;
+  text-align:center;
+  padding:25px;
+  line-height:1.9;
+  border-top:2px solid #813cff;
+  color:#d5d8ff;
+}
+
+@media(max-width:450px) {
+  .grid {grid-template-columns:1fr}
+  .hero h2 {font-size:25px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>EngPaul <span>Educare KE</span></h1>
+<p>Learn • Innovate • Succeed</p>
+<p>AI-Powered Learning Platform</p>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#highschool">High School</a>
+<a href="#tvet">TVET</a>
+<a href="#free">Free Library</a>
+<a href="#ai">AI Centre</a>
+</nav>
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+<h2>Welcome to <span>EngPaul Educare KE</span></h2>
+<p>
+Your complete learning destination for High School
+and TVET College education.
+Access free notes, past papers, revision questions
+and intelligent AI learning tools.
+</p>
+<button class="btn" onclick="location.href='#highschool'">
+Start Learning 🚀
+</button>
+</section>
+
+<!-- EDUCATION LEVELS -->
+
+<h2 class="heading">Choose Your Education Level</h2>
+
+<section class="grid">
+
+<div class="card">
+<h3>🏫 High School</h3>
+<p>KCSE notes, past papers, revision and marking schemes.</p>
+<button onclick="location.href='#highschool'">
+Explore High School
+</button>
+</div>
+
+<div class="card">
+<h3>🎓 TVET Colleges</h3>
+<p>Technical modules, practical notes and assessments.</p>
+<button onclick="location.href='#tvet'">
+Explore TVET
+</button>
+</div>
+
+</section>
+
+<!-- HIGH SCHOOL -->
+
+<h2 class="heading" id="highschool">
+🏫 High School Learning Centre
+</h2>
+
+<section class="grid">
+
+<div class="card free">
+<h3>📚 Free Notes</h3>
+<p>Mathematics, English, Kiswahili, Physics, Chemistry and Biology.</p>
+<button onclick="filterLevel('high-school')">
+Browse Notes
+</button>
+</div>
+
+<div class="card free">
+<h3>📝 Past Papers</h3>
+<p>KCSE examination practice questions.</p>
+<button onclick="filterLevel('high-school')">
+Browse Questions
+</button>
+</div>
+
+<div class="card free">
+<h3>✅ Marking Schemes</h3>
+<p>Answers and examination marking guides.</p>
+<button onclick="filterLevel('high-school')">
+View Answers
+</button>
+</div>
+
+<div class="card ai">
+<h3>🤖 AI School Tutor</h3>
+<p>Get help understanding school subjects.</p>
+<button onclick="openAI('High School')">
+Ask AI Tutor
+</button>
+</div>
+
+</section>
+
+<!-- TVET -->
+
+<h2 class="heading" id="tvet">
+🎓 TVET College Learning Centre
+</h2>
+
+<section class="grid">
+
+<div class="card free">
+<h3>📖 Module Notes</h3>
+<p>Electrical, Mechanical, ICT and Mechatronics.</p>
+<button onclick="filterLevel('tvet')">
+Browse Modules
+</button>
+</div>
+
+<div class="card free">
+<h3>📝 Past Questions</h3>
+<p>TVET assessments and revision questions.</p>
+<button onclick="filterLevel('tvet')">
+View Questions
+</button>
+</div>
+
+<div class="card free">
+<h3>⚙️ Practical Guides</h3>
+<p>Technical exercises and workshop guides.</p>
+<button onclick="filterLevel('tvet')">
+Explore Guides
+</button>
+</div>
+
+<div class="card ai">
+<h3>🤖 AI Technical Tutor</h3>
+<p>Learn programming and engineering.</p>
+<button onclick="openAI('TVET')">
+Ask AI Tutor
+</button>
+</div>
+
+</section>
+
+<!-- FREE LIBRARY -->
+
+<h2 class="heading" id="free">
+📚 FREE DIGITAL LIBRARY
+</h2>
+
+<div class="panel">
+
+<h3>Find Learning Materials</h3>
+
+<input type="text" id="searchResource"
+placeholder="Search notes, questions or subjects..."
+oninput="searchResources()">
+
+<select id="resourceLevel" onchange="searchResources()">
+<option value="all">All Education Levels</option>
+<option value="high-school">High School</option>
+<option value="tvet">TVET College</option>
+</select>
+
+<div id="resourceList">
+
+<div class="card free resource" data-level="high-school">
+<h3>📘 High School Notes</h3>
+<p>Free subject notes and revision materials.</p>
+<a href="high-school/notes/">Browse Notes</a>
+</div>
+
+<div class="card free resource" data-level="high-school">
+<h3>📝 High School Past Papers</h3>
+<p>Free examination practice questions.</p>
+<a href="high-school/past-papers/">Browse Papers</a>
+</div>
+
+<div class="card free resource" data-level="high-school">
+<h3>✅ High School Marking Schemes</h3>
+<p>Answers and marking guides.</p>
+<a href="high-school/marking-schemes/">Browse Answers</a>
+</div>
+
+<div class="card free resource" data-level="tvet">
+<h3>📖 TVET Module Notes</h3>
+<p>Free technical and vocational notes.</p>
+<a href="tvet/module-notes/">Browse Modules</a>
+</div>
+
+<div class="card free resource" data-level="tvet">
+<h3>📝 TVET Past Questions</h3>
+<p>Assessment and revision questions.</p>
+<a href="tvet/past-questions/">Browse Questions</a>
+</div>
+
+<div class="card free resource" data-level="tvet">
+<h3>🔧 TVET Practical Guides</h3>
+<p>Workshop and practical learning materials.</p>
+<a href="tvet/practical-guides/">Browse Guides</a>
+</div>
+
+</div>
+</div>
+
+<!-- AI CENTRE -->
+
+<h2 class="heading" id="ai">
+🤖 AI LEARNING CENTRE
+</h2>
+
+<div class="panel">
+
+<h3>Meet Your AI Study Assistant</h3>
+
+<p>Choose your education level and enter a question.</p>
+
+<select id="level">
+<option value="High School">High School</option>
+<option value="TVET">TVET College</option>
+</select>
+
+<input type="text" id="question"
+placeholder="Ask your learning question...">
+
+<button class="btn" onclick="askAI()">
+Send to AI Tutor
+</button>
+
+<p id="answer">
+Your AI Tutor interface is ready.
+A secure AI connection will be added next.
+</p>
+
+</div>
+
+<!-- AI TOOLS -->
+
+<h2 class="heading">More AI Learning Tools</h2>
+
+<section class="grid">
+
+<div class="card ai">
+<h3>📝 AI Notes Generator</h3>
+<p>Generate and summarize study notes.</p>
+<button onclick="alert('AI Notes engine coming soon!')">
+Open AI Notes
+</button>
+</div>
+
+<div class="card ai">
+<h3>🎯 AI Quiz Generator</h3>
+<p>Generate revision questions and answers.</p>
+<button onclick="alert('AI Quiz engine coming soon!')">
+Generate Quiz
+</button>
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+<p><b>EngPaul Educare KE</b></p>
+<p>Founder: Paul Mandela Omutuya</p>
+<p>Mechatronic Engineer & Software Developer</p>
+<p>Learn • Innovate • Succeed</p>
+<p>© 2026 EngPaul Educare KE</p>
+</footer>
+
+<script>
+
+function filterLevel(level) {
+ document.getElementById("resourceLevel").value = level;
+ searchResources();
+ location.href = "#free";
+}
+
+function searchResources() {
+ const search = document
+ .getElementById("searchResource").value.toLowerCase();
+
+ const level = document
+ .getElementById("resourceLevel").value;
+
+ document.querySelectorAll(".resource").forEach(card => {
+ const text = card.innerText.toLowerCase();
+ const matchesText = text.includes(search);
+ const matchesLevel = level === "all" ||
+ card.dataset.level === level;
+
+ card.style.display =
+ matchesText && matchesLevel ? "block" : "none";
+ });
+}
+
+function openAI(level) {
+ document.getElementById("level").value = level;
+ location.href = "#ai";
+}
+
+function askAI() {
+ const question = document.getElementById("question").value.trim();
+ const level = document.getElementById("level").value;
+
+ if(!question) {
+   alert("Please enter your question.");
+   return;
+ }
+
+ document.getElementById("answer").innerText =
+ "Your " + level + " question has been entered.\n\n" +
+ "The AI interface is working. Connect the secure AI engine " +
+ "to receive intelligent answers.";
+}
+
+</script>
+
+</body>
+</html>
